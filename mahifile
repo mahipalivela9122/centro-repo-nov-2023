@@ -1,0 +1,10 @@
+1st line from mumbai
+node {
+    stage ('Build') {
+        git url: 'https://github.com/rakshitha2/test_proj.git'
+
+        def mvnHome = tool 'M3'
+
+        bat "${mvnHome}\\bin\\mvn -B install"
+    }
+}
